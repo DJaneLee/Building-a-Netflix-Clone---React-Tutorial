@@ -27,10 +27,10 @@ export default function Home() {
             </OptForm.Text>
           </OptForm>
         </Feature>
-        <JumbotronContainer />
-        <FaqsContainer />
-        <FooterContainer />
       </HeaderContainer>
+      <JumbotronContainer />
+      <FaqsContainer />
+      <FooterContainer />
     </>
   );
 }
