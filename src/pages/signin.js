@@ -15,10 +15,11 @@ export default function SignIn() {
   const [error, setError] = useState("");
 
   const isInValid = password === "" || emailAddress === "";
+
   const handleSignIn = (event) => {
     event.preventDefault();
     // firebase work here!
-    firebase
+    return firebase
       .auth()
       .signInWithEmailAndPassword(emailAddress, password)
       .then(() => {
@@ -52,7 +53,11 @@ export default function SignIn() {
               value={password}
               onchange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={isInValid} type="submit">
+            <Form.Submit
+              disabled={isInValid}
+              type="submit"
+              data-testid="sign-in"
+            >
               Sign In
             </Form.Submit>
           </Form.Base>
