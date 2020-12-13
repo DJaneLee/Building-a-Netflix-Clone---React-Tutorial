@@ -75,7 +75,7 @@ export function BrowseContainer({ slides }) {
             he projects in a futile attempt to feel like he's part of the world
             around him.
           </Header.Text>
-          <Header.PlayButton></Header.PlayButton>
+          <Header.PlayButton>Play</Header.PlayButton>
         </Header.Feature>
       </Header>
 
@@ -89,9 +89,16 @@ export function BrowseContainer({ slides }) {
                   <Card.Image
                     src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`}
                   />
+                  <Card.Meta>
+                    <Card.SubTitle>{item.title}</Card.SubTitle>
+                    <Card.Text>{item.description}</Card.Text>
+                  </Card.Meta>
                 </Card.Item>
               ))}
             </Card.Entities>
+            <Card.Feature category={category}>
+              <p>Hello</p>
+            </Card.Feature>
           </Card>
         ))}
       </Card.Group>
